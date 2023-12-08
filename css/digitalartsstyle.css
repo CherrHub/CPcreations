@@ -1,0 +1,510 @@
+* {
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+}
+
+body {
+	padding-top: 60px;
+	min-height: 100vh;
+
+	background-size: cover;
+	background-color: rgb(5, 102, 126);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+
+/* Header Styles */
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	letter-spacing: 1px;
+	background-color: #16a085;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	padding: 12px 30px;
+	z-index: 100;
+}
+
+ul {
+	justify-content: center;
+	align-items: center;
+	list-style-type: none;
+}
+
+header li {
+	display: inline;
+}
+
+.logo {
+	font-size: 32px;
+	color: white;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+.navbar a {
+	display: inline-block;
+	position: relative;
+	font-size: 17px;
+	font-weight: 500;
+	text-decoration: none;
+	text-transform: uppercase;
+	margin-left: 20px;
+	line-height: 1.8;
+	color: white;
+}
+
+.navbar a::before {
+	content: '';
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background-color: rgb(255, 255, 255);
+	transform: scaleX(0);
+	transform-origin: top;
+	transition: transform .4s linear;
+}
+
+.navbar a:hover::before {
+	width: 100%;
+	transform: scaleX(1);
+	transform-origin: top;
+}
+
+label #btn,
+label #cancel {
+	font-size: 30px;
+	color: white;
+	float: right;
+	line-height: 80px;
+	margin-right: 40px;
+	cursor: pointer;
+}
+
+.checkbtn {
+	font-size: 30px;
+	color: white;
+	float: right;
+	line-height: 80px;
+	margin-right: 0px;
+	cursor: pointer;
+	display: none;
+}
+
+#check {
+	display: none;
+}
+
+h1 {
+	color: rgb(204, 252, 255);
+	background-image: linear-gradient(-90deg, rgb(0, 183, 255), rgb(0, 224, 183));
+	border-radius: 10px;
+	width: 50;
+	padding: 10px;
+	margin: 10px;
+	text-align: center;
+	text-shadow: 0 0 3px #53c0ff;
+}
+
+p {
+	font-size: x-large;
+	line-height: 150%;
+}
+
+
+/* Images Styles */
+
+
+img {
+	border-radius: 2%;
+	max-width: 100%;
+	height: auto;
+}
+
+img:hover {
+	transform: scale(1.12);
+	filter: drop-shadow(0 0 1rem rgb(31, 128, 160));
+	padding: 10px;
+}
+
+
+/* Original Characters Styles */
+
+
+.originalcharacters {
+	padding-top: 4px;
+	background-color: rgb(55, 183, 188);
+	background-image: linear-gradient(-60deg, rgb(0, 145, 255), rgb(98, 255, 226));
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	column-gap: 10px;
+
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.originalcharacters>div {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+
+.BernieBalatasimg {
+	width: 255px;
+}
+
+.Bernie_and_Breeimg {
+	width: 457px;
+}
+
+.BreeBalatasimg {
+	width: 255px;
+}
+
+
+/* Fan Arts Styles*/
+
+
+.fanarts {
+	background-color: rgb(55, 183, 188);
+	background-image: linear-gradient(-60deg, rgb(0, 145, 255), rgb(98, 255, 226));
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	column-gap: 10px;
+
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.fanarts>div {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.amphibiaimg {
+	width: 379px;
+}
+
+.fnfimg {
+	width: 255px;
+}
+
+.SUandTAWOGimg {
+	width: 395px;
+}
+
+.HTFstwoaprilfoolsimg {
+	width: 442px;
+}
+
+.bendyandaliceimg {
+	width: 190px;
+}
+
+.BFFimg {
+	width: 378px;
+}
+
+.HMvsTPPimg {
+	width: 408px;
+}
+
+.wandaandfoofimg {
+	width: 435px;
+}
+
+.HMlogoimg {
+	width: 225px;
+}
+
+.sonicandmarioimg {
+	width: 308px;
+}
+
+
+/* Digital Sketch Styles */
+
+
+.digitalsketchesseries {
+	background-color: rgb(55, 183, 188);
+	background-image: linear-gradient(-60deg, rgb(0, 145, 255), rgb(98, 255, 226));
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	column-gap: 10px;
+
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.digitalsketchesseries>div {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.HTFdigitalsketchesdiv>a>img {
+	max-width: 642px;
+}
+
+
+/* --- Media Queries --- */
+
+
+@media (max-width:1349px) {
+	.HTFdigitalsketchesdiv>a>img {
+		max-width: 592px;
+	}
+}
+
+@media (max-width:570px) {
+
+	.fanarts {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.HTFstwoaprilfoolsdiv>a>img {
+		max-width: 392px;
+	}
+}
+
+
+@media (max-width:500px) {
+
+	.HTFstwoaprilfoolsdiv>a>img {
+		max-width: 392px;
+	}
+
+	.wandaandfoofdiv>a>img {
+		max-width: 412px;
+	}
+}
+
+@media (max-width:468px) {
+
+	.Bernie_and_Breeimg {
+		max-width: 357px;
+	}
+
+	.SUandTAWOGdiv>a>img {
+		max-width: 390px;
+	}
+
+	.HTFstwoaprilfoolsdiv>a>img {
+		max-width: 392px;
+	}
+
+	.HMvsTPPdiv>a>img {
+		max-width: 362px;
+	}
+
+	.wandaandfoofdiv>a>img {
+		max-width: 362px;
+	}
+}
+
+
+@media (max-width:450px) {
+
+	.SUandTAWOGdiv>a>img {
+		max-width: 385px;
+	}
+
+	.HTFstwoaprilfoolsdiv>a>img {
+		max-width: 382px;
+	}
+}
+
+@media (max-width:439px) {
+
+	.SUandTAWOGdiv>a>img {
+		max-width: 372px;
+	}
+
+	.HTFstwoaprilfoolsimg {
+		max-width: 372px;
+	}
+}
+
+@media (max-width:417px) {
+
+	.SUandTAWOGdiv>a>img,
+	.HTFstwoaprilfoolsimg {
+		width: 362px;
+	}
+}
+
+@media (max-width:415px) {
+
+	.HTFdigitalsketchesdiv>a>img {
+		max-width: 319px;
+	}
+
+	.amphibiadiv>a>img {
+		max-width: 352px;
+	}
+
+	.SUandTAWOGdiv>a>img,
+	.HTFstwoaprilfoolsdiv>a>img {
+		max-width: 352px;
+	}
+
+	.BFFdiv>a>img {
+		max-width: 352px;
+	}
+
+	.HMvsTPPdiv>a>img {
+		max-width: 352px;
+	}
+
+	.wandaandfoofdiv>a>img {
+		max-width: 352px;
+	}
+
+}
+
+@media (max-width:390px) {
+
+	.HMvsTPPdiv>a>img {
+		max-width: 322px;
+	}
+
+	.SUandTAWOGdiv>a>img,
+	.HTFstwoaprilfoolsdiv>a>img {
+		max-width: 342px;
+	}
+
+	.BFFdiv>a>img {
+		max-width: 322px;
+	}
+
+	.wandaandfoofdiv>a>img {
+		max-width: 332px;
+	}
+}
+
+@media (max-width:374px) {
+
+	.amphibiadiv>a>img {
+		max-width: 319px;
+	}
+	.SUandTAWOGdiv>a>img,
+	.HTFstwoaprilfoolsdiv>a>img {
+		max-width: 322px;
+	}
+
+	.HTFdigitalsketchesdiv>a>img {
+		max-width: 312px;
+	}
+}
+
+@media (max-width:364px) {
+
+	.amphibiadiv>a>img {
+		max-width: 319px;
+	}
+
+	.SUandTAWOGdiv>a>img,
+	.HTFstwoaprilfoolsdiv>a>img {
+		max-width: 312px;
+	}
+}
+
+@media (max-width:285px) {
+
+    img {
+        max-width: 200px;
+    }
+}
+
+
+/* Header Styles MQs */
+
+
+@media (max-width:1119px) {
+	body {
+		padding-top: 96px;
+	}
+}
+
+@media (max-width:725px) {
+	body {
+		padding-top: 133px;
+	}
+}
+
+@media (max-width: 720px) {
+	body {
+		padding-top: 103px;
+	}
+
+	.logo {
+		font-size: 25px;
+	}
+}
+
+@media (max-width:747px) {
+	nav ul li a {
+		font-size: 8px;
+	}
+}
+
+@media (max-width:720px) {
+	nav ul li a {
+		font-size: 18px;
+	}
+
+	.checkbtn {
+		display: block;
+	}
+
+	ul.navli {
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		background: RGB(22, 160, 133);
+		top: 80px;
+		left: -100%;
+		text-align: left;
+	}
+
+	nav ul li {
+		display: block;
+		margin: 50px 0;
+		line-height: 30px;
+	}
+
+	nav ul li a:hover:before {
+		transform: scaleX(1);
+		transform-origin: top;
+	}
+
+	#check:checked~ul {
+		left: 0;
+	}
+}
+
+@media (max-width:463px) {
+	ul.navli {
+		top: 100px;
+	}
+}
+
+@media (max-width:338px) {
+	ul.navli {
+		top: 100px;
+	}
+}

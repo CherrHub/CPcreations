@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cherry Mae's Contact</title>
+    <link rel="stylesheet" href="../css/contactstyle.css" />
+    <script src="../js/contactscripts.js" defer></script>
+</head>
+
+<body>
+
+	<header>
+
+		<div><a href="../index.html" class="logo">Cherry Mae's Project</a></div>
+
+		<div>
+			<nav class="navbar">
+				<input type="checkbox" id="check">
+				<label for="check" class="checkbtn">
+					<i class="fas fa-bars" id="btn"></i></label>
+				<link rel="stylesheet"
+					href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+				<ul class="navli">
+					<li><a href="../index.html">Home</a></li>
+					<li><a href="../pages/about.html">About</a></li>
+					<li><a href="../pages/digitalarts.html">Digital Arts</a></li>
+					<li><a href="../pages/traditionaldrawings.html">Traditional Drawings</a></li>
+					<li><a href="../pages/contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+    <form name="contactform" method="post" action="https://jkorpela.fi/cgi-bin/echo.cgi" target="cgi-results">
+        <fieldset>
+            <legend>Name Information:</legend>
+            <div class="fname">
+                <div><label class="formlabel" for="fname">First Name:</label></div>
+                <div><input name="fname" id="fname" type="text" tabindex="1" onkeyup="checkform()"
+                        placeholder="First Name" required /></div>
+            </div>
+            <br>
+            <div class="lname">
+                <div><label class="formlabel" for="lname">Last Name:</label></div>
+                <div><input name="lname" id="lname" type="text" tabindex="2" onkeyup="checkform()"
+                        placeholder="Last Name" required /></div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Contact Information:</legend>
+            <div class="email">
+                <div><label class="formlabel" for="email">Email:</label></div>
+                <div><input name="email" id="email" type="email" tabindex="3" onkeyup="checkform()" placeholder="Email"
+                        required /></div>
+            </div>
+            <br>
+            <div class="phone">
+                <div><label class="formlabel" for="phone">Phone:</label></div>
+                <div><input name="phone" id="phone" type="tel" tabindex="4" onkeyup="checkform()" placeholder="Phone"
+                        required /></div>
+            </div>
+        </fieldset>
+        <br>
+        <fieldset class="fieldsetsubmit">
+            <div class="submit">
+                <div class="inputdiv"><input id="submitButton" type="submit" disabled="disabled"
+                        onclick="disableFields()" value="Submit" tabindex="6" /></div>
+            </div>
+        </fieldset>
+    </form>
+    <br>
+    <div class="iframediv">
+        <iframe name="cgi-results" id="cgi-results">
+    </div>
+
+</body>
+
+</html>

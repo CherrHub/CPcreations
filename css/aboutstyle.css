@@ -1,0 +1,495 @@
+* {
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+}
+
+body {
+	padding-top: 60px;
+	min-height: 100vh;
+
+	background-size: cover;
+	background-color: rgb(5, 102, 126);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+/* Header style */
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	letter-spacing: 1px;
+	background-color: #16a085;
+
+	position: fixed;
+    top: 0;
+    left: 0;
+
+	width: 100%;
+	padding: 12px 30px;
+	z-index: 100;
+}
+
+ul {
+	justify-content: center;
+	align-items: center;
+	list-style-type: none;
+}
+
+header li {
+	display: inline;
+}
+
+.logo {
+	font-size: 32px;
+	color: white;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+.navbar a {
+	display: inline-block;
+	position: relative;
+	font-size: 17px;
+	font-weight: 500;
+	text-decoration: none;
+	text-transform: uppercase;
+	margin-left: 20px;
+	line-height: 1.8;
+	color: white;
+}
+
+.navbar a::before {
+	content: '';
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background-color: rgb(255, 255, 255);
+	transform: scaleX(0);
+	transform-origin: top;
+	transition: transform .4s linear;
+}
+
+.navbar a:hover::before {
+	width: 100%;
+	transform: scaleX(1);
+	transform-origin: top;
+}
+
+label #btn,
+label #cancel {
+	font-size: 30px;
+	color: white;
+	float: right;
+	line-height: 80px;
+	margin-right: 40px;
+	cursor: pointer;
+}
+
+.checkbtn {
+	font-size: 30px;
+	color: white;
+	float: right;
+	line-height: 80px;
+	margin-right: 0px;
+	cursor: pointer;
+	display: none;
+}
+
+#check {
+	display: none;
+}
+
+
+/* h1 and p styles*/
+
+
+h1 {
+	color: rgb(0, 92, 128);
+	background-image: linear-gradient(-90deg, rgb(0, 183, 255), rgb(0, 224, 183));
+	border-radius: 10px;
+	width: 50;
+	padding: 10px;
+	margin: 10px;
+	text-align: center;
+	text-shadow: 0 0 3px #53c0ff;
+}
+
+p {
+	font-size: x-large;
+	line-height: 150%;
+	padding: 5px;
+	font-family: takoma;
+}
+
+
+/* Grid */
+
+
+.container {
+	display: grid;
+	grid-gap: 10px 10px;
+	padding: 10px;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	letter-spacing: 1px;
+}
+
+.container>div {
+	border-width: 5px;
+}
+
+h2 {
+	margin: 10px;
+}
+
+
+img {
+	border-radius: 500px;
+}
+
+
+/* Artist Profile Styles */
+
+
+.Artist_Profile {
+	border: 1px dashed rgb(0, 92, 128);
+	background-color: rgb(16, 179, 179);
+
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 1;
+	grid-row-end: 5;
+
+	text-align: center;
+	color: rgb(0, 66, 92);
+
+	margin-right: 10px;
+}
+
+.Artist_Profile:hover {
+	transform: scale(1.01);
+}
+
+img.CPimg {
+	margin: 10px;
+	width: 80%;
+}
+
+
+/* Meet the Artist Styles */
+
+
+.Meet_the_Artist {
+	border: 1px dashed rgb(0, 128, 6);
+
+	background-color: rgb(68, 190, 159);
+	color: rgb(11, 83, 14);
+
+	grid-column-start: 2;
+	grid-column-end: 3;
+	text-align: center;
+}
+
+.Meet_the_Artist:hover {
+	transform: scale(1.01);
+}
+
+
+/* Favorite Fun Facts Styles */
+
+
+.Fun_Facts {
+	border: 1px dashed rgb(0, 32, 128);
+
+	background-color: rgb(57, 91, 200);
+	color: rgb(10, 26, 74);
+
+	grid-column-start: 2;
+	grid-column-end: 3;
+	text-align: center;
+}
+
+.Fun_Facts:hover {
+	transform: scale(1.01);
+}
+
+
+/* Favorite quote Styles */
+
+
+.Favorite_quote {
+	border: 1px dashed rgb(202, 111, 0);
+
+	background-color: rgb(202, 225, 69);
+	color: rgb(171, 98, 10);
+
+	grid-column-start: 2;
+	grid-column-end: 3;
+	text-align: center;
+	line-height: 2em;
+}
+
+.Favorite_quote:hover {
+	transform: scale(1.01);
+}
+
+
+/* Favorite YouTubers Styles */
+
+
+.Favorite_YouTubers {
+	border: 1px dashed rgb(128, 0, 0);
+	background-color: rgb(255, 0, 0);
+	grid-column-start: 2;
+	grid-column-end: 3;
+}
+
+.Favorite_YouTubers:hover {
+	transform: scale(1.01);
+}
+
+.Favorite_YouTubers>h2 {
+	text-align: center;
+	color: white;
+
+}
+
+.YouTubers {
+	display: grid;
+	grid-template-columns: auto;
+	grid-gap: 10px;
+	background-color: rgb(255, 74, 74);
+}
+
+.YTimage {
+	margin-top: 25px;
+	margin-left: 25px;
+	grid-column-start: 1;
+	grid-column-end: 2;
+}
+
+ul.YTli li::marker {
+	content: "▶";
+	color: white;
+}
+
+ul.YTli li {
+	padding: 1em;
+	font-size: 18px;
+	font-family: takoma;
+}
+
+.kubzscouts {
+	background-color: rgb(195, 49, 49);
+	color: white;
+
+	margin-top: 10px;
+	margin-right: 20px;
+
+	grid-column-start: 2;
+	grid-column-end: 5;
+	grid-row-start: 1;
+	grid-row-end: 2;
+}
+
+.kubzscoutsimgdiv {
+	display: flex;
+
+	margin-top: 10px;
+	margin-left: 20px;
+	margin-right: 10px;
+}
+
+.mrbeast {
+	background-color: rgb(195, 49, 49);
+	color: white;
+
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-right: 20px;
+
+	grid-column-start: 2;
+	grid-column-end: 5;
+	grid-row-start: 2;
+	grid-row-end: 3;
+}
+
+.mrbeastimgdiv {
+	display: flex;
+
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 20px;
+	margin-right: 10px;
+}
+
+.KSimg,
+.MBimg {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.YTusernames {
+	text-align: center;
+	font-size: x-large;
+}
+
+
+/* --- Media Queries --- */
+
+
+/* Grid MQ */
+
+
+@media (max-width:720px) {
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		font-family: Georgia, 'Times New Roman', Times, serif;
+		letter-spacing: 1px;
+	}
+
+	.Artist_Profile {
+		margin-right: 0;
+	}
+
+	.YouTubers {
+		display: flex;
+		flex-direction: column;
+		grid-template-columns: auto;
+		background-color: rgb(255, 74, 74);
+	}
+
+	ul.YTli li::marker {
+		content: "▶";
+		color: white;
+	}
+
+	ul.YTli li {
+		padding: 1em;
+		font-size: 18px;
+		font-family: takoma;
+	}
+
+	.kubzscouts {
+		margin: 6px;
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+
+	.kubzscoutsimgdiv {
+		margin-top: 10px;
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+
+	.mrbeast {
+		margin: 6px;
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+
+	.mrbeastimgdiv {
+		margin-top: 10px;
+		margin-bottom: 10px;
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+
+	.KSimg,
+	.MBimg {
+		margin-left: auto;
+		margin-right: auto;
+
+	}
+
+}
+
+/* Header Styles MQs */
+
+@media (max-width:1119px) {
+	body {
+		padding-top: 96px;
+	}
+}
+
+@media (max-width:725px) {
+	body {
+		padding-top: 133px;
+	}
+}
+
+@media (max-width: 720px) {
+	body {
+		padding-top: 103px;
+	}
+
+	.logo {
+		font-size: 25px;
+	}
+}
+
+@media (max-width:747px) {
+	nav ul li a {
+		font-size: 8px;
+	}
+}
+
+@media (max-width:720px) {
+
+	nav ul li a {
+		font-size: 18px;
+	}
+
+	.checkbtn {
+		display: block;
+	}
+
+	ul.navli {
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		background: RGB(22, 160, 133);
+		top: 80px;
+		left: -100%;
+		text-align: left;
+	}
+
+	nav ul li {
+		display: block;
+		margin: 50px 0;
+		line-height: 30px;
+	}
+
+	nav ul li a:hover:before {
+		transform: scaleX(1);
+		transform-origin: top;
+	}
+
+	#check:checked~ul {
+		left: 0;
+	}
+}
+
+
+@media (max-width:463px) {
+	ul.navli {
+		top: 100px;
+	}
+}
+
+@media (max-width:338px) {
+	ul.navli {
+		top: 100px;
+	}
+}

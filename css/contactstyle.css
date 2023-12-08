@@ -1,0 +1,725 @@
+* {
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+}
+
+body {
+	padding-top: 60px;
+	min-height: 100vh;
+
+	background-size: cover;
+	background-color: rgb(5, 102, 126);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+
+/* Header Styles */
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	letter-spacing: 1px;
+	background-color: #16a085;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	padding: 12px 30px;
+	z-index: 100;
+}
+
+ul {
+	justify-content: center;
+	align-items: center;
+	list-style-type: none;
+}
+
+header li {
+	display: inline;
+}
+
+.logo {
+	font-size: 32px;
+	color: white;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+.navbar a {
+	display: inline-block;
+	position: relative;
+	font-size: 17px;
+	font-weight: 500;
+	text-decoration: none;
+	text-transform: uppercase;
+	margin-left: 20px;
+	line-height: 1.8;
+	color: white;
+}
+
+.navbar a::before {
+	content: '';
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background-color: rgb(255, 255, 255);
+	transform: scaleX(0);
+	transform-origin: top;
+	transition: transform .4s linear;
+}
+
+.navbar a:hover::before {
+	width: 100%;
+	transform: scaleX(1);
+	transform-origin: top;
+}
+
+label #btn,
+label #cancel {
+	font-size: 30px;
+	color: white;
+	float: right;
+	line-height: 80px;
+	margin-right: 40px;
+	cursor: pointer;
+}
+
+.checkbtn {
+	font-size: 30px;
+	color: white;
+	float: right;
+	line-height: 80px;
+	margin-right: 0px;
+	cursor: pointer;
+	display: none;
+}
+
+#check {
+	display: none;
+}
+
+
+/* Form Styles */
+
+form {
+	background-color: rgb(174, 255, 241);
+	border-radius: 10px;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+	padding: 20px;
+
+	margin-top: 2%;
+	margin-left: 20%;
+	margin-right: 20%;
+
+	box-shadow: 0px 0px 20px 5px rgba(173, 216, 230, 0.669);
+}
+
+fieldset {
+	border-color: rgb(116, 195, 234);
+	border-radius: 10px;
+	background-color: rgb(121, 222, 255);
+}
+
+.fname,
+.lname,
+.email,
+.phone,
+.bdate {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	margin-top: 5px;
+	margin-bottom: 9px;
+}
+
+.submit {
+	display: flex;
+	justify-content: center;
+	background-color: rgb(174, 255, 241);
+	margin: 10px 20px;
+	border-radius: 6px;
+}
+
+legend {
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-size: 25px;
+	color: rgb(1, 65, 134);
+	letter-spacing: 2px;
+
+	margin-left: 6px;
+	margin-bottom: 3;
+}
+
+.formlabel {
+	color: rgb(1, 65, 134);
+	margin-left: 9px;
+	margin-right: 9px;
+}
+
+.formlabel:hover {
+	font-weight: bolder;
+}
+
+input:not(header>.navbar>input) {
+	padding: 10px;
+	box-sizing: border-box;
+	border-color: rgb(42, 114, 165);
+	font-weight: bolder;
+	border-radius: 6px;
+}
+
+input:not(.submit>.inputdiv>input) {
+	margin-right: 9px;
+	border-radius: 40px;
+
+}
+
+
+.fname>div>input,
+.lname>div>input {
+	display: flex;
+	justify-content: center;
+	width: 1000px;
+}
+
+.email>div>input,
+.phone>div>input {
+	margin-left: 6px;
+	display: flex;
+	justify-content: start;
+
+	width: 1030px;
+}
+
+.inputdiv>input {
+	display: flex;
+	justify-content: center;
+	width: 20em;
+}
+
+iframe {
+	display: flex;
+	background-color: rgb(174, 255, 241);
+	box-shadow: 0px 5px 20px 5px rgba(173, 216, 230, 0.669);
+	width: 50%;
+
+	margin: auto;
+}
+
+
+/* --- Media Queries --- */
+
+
+@media (max-width: 481px) {
+
+	.fname,
+	.lname,
+	.email,
+	.phone,
+	.submit {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.fieldsetsubmit {
+		max-width: auto;
+		margin-right: auto;
+
+	}
+
+	.inputdiv {
+		display: flex;
+		justify-content: center;
+	}
+
+	.inputdiv>input {
+		display: flex;
+		justify-content: center;
+		width: 10em;
+	}
+}
+
+@media (max-width: 448px) {
+
+	.fname,
+	.lname,
+	.email,
+	.phone,
+	.submit {
+		display: flex;
+		flex-direction: column;
+		max-width: 20em;
+	}
+
+	.fieldsetsubmit {
+		max-width: auto;
+		margin-right: auto;
+
+	}
+
+	.inputdiv {
+		display: flex;
+		justify-content: center;
+	}
+
+	.inputdiv>input {
+		display: flex;
+		justify-content: center;
+		width: 10em;
+	}
+}
+
+
+/* Input Styles MQ */
+
+
+@media (max-width: 1960px) {
+
+	.fname>div>input,
+	.lname>div>input {
+		display: flex;
+		justify-content: center;
+		width: 890px;
+	}
+
+	.email>div>input,
+	.phone>div>input {
+		margin-left: 6px;
+		display: flex;
+		justify-content: start;
+		width: 921px;
+	}
+}
+
+@media (max-width: 1778px) {
+
+	.fname>div>input,
+	.lname>div>input {
+		display: flex;
+		justify-content: center;
+		width: 800px;
+	}
+
+	.email>div>input,
+	.phone>div>input {
+		margin-left: 6px;
+		display: flex;
+		justify-content: start;
+		width: 830px;
+	}
+}
+
+@media (max-width: 1677px) {
+
+	.fname>div>input,
+	.lname>div>input {
+		display: flex;
+		justify-content: center;
+		width: 770px;
+	}
+
+	.email>div>input,
+	.phone>div>input {
+		margin-left: 6px;
+		display: flex;
+		justify-content: start;
+		width: 800px;
+	}
+}
+
+@media (max-width: 1677px) {
+
+	.fname>div>input,
+	.lname>div>input {
+		display: flex;
+		justify-content: center;
+		width: 770px;
+	}
+
+	.email>div>input,
+	.phone>div>input {
+		margin-left: 6px;
+		display: flex;
+		justify-content: start;
+		width: 800px;
+	}
+}
+
+@media (max-width: 1677px) {
+
+	.fname>div>input,
+	.lname>div>input {
+		display: flex;
+		justify-content: center;
+		width: 730px;
+	}
+
+	.email>div>input,
+	.phone>div>input {
+		margin-left: 6px;
+		display: flex;
+		justify-content: start;
+		width: 760px;
+	}
+}
+
+@media (max-width: 1519px) {
+
+	.fname>div>input,
+	.lname>div>input {
+		display: flex;
+		justify-content: center;
+		width: 660px;
+	}
+
+	.email>div>input,
+	.phone>div>input {
+		margin-left: 6px;
+		display: flex;
+		justify-content: start;
+		width: 690px;
+	}
+}
+
+@media (max-width: 1420px) {
+
+	.fname>div>input,
+	.lname>div>input {
+		display: flex;
+		justify-content: center;
+		width: 590px;
+	}
+
+	.email>div>input,
+	.phone>div>input {
+		margin-left: 6px;
+		display: flex;
+		justify-content: start;
+		width: 620px;
+	}
+}
+
+@media (max-width: 1300px) {
+
+	.fname>div>input,
+	.lname>div>input {
+		display: flex;
+		justify-content: center;
+		width: 510px;
+	}
+
+	.email>div>input,
+	.phone>div>input {
+		margin-left: 6px;
+		display: flex;
+		justify-content: start;
+		width: 540px;
+	}
+}
+
+@media (max-width: 1193px) {
+
+	.fname>div>input,
+	.lname>div>input {
+		display: flex;
+		justify-content: center;
+		width: 440px;
+	}
+
+	.email>div>input,
+	.phone>div>input {
+		margin-left: 6px;
+		display: flex;
+		justify-content: start;
+		width: 470px;
+	}
+}
+
+@media (max-width: 1036px) {
+
+	.fname>div>input,
+	.lname>div>input {
+		display: flex;
+		justify-content: center;
+		width: 380px;
+	}
+
+	.email>div>input,
+	.phone>div>input {
+		margin-left: 6px;
+		display: flex;
+		justify-content: start;
+		width: 409px;
+	}
+}
+
+@media (max-width: 955px) {
+
+	.fname>div>input,
+	.lname>div>input {
+		display: flex;
+		justify-content: center;
+		width: 340px;
+	}
+
+	.email>div>input,
+	.phone>div>input {
+		margin-left: 6px;
+		display: flex;
+		justify-content: start;
+		width: 370px;
+	}
+}
+
+@media (max-width: 868px) {
+
+	.fname>div>input,
+	.lname>div>input {
+		display: flex;
+		justify-content: center;
+		width: 270px;
+	}
+
+	.email>div>input,
+	.phone>div>input {
+		margin-left: 6px;
+		display: flex;
+		justify-content: start;
+		width: 300px;
+	}
+}
+
+@media (max-width: 761px) {
+
+	.fname>div>input,
+	.lname>div>input {
+		display: flex;
+		justify-content: center;
+		width: 200px;
+	}
+
+	.email>div>input,
+	.phone>div>input {
+		margin-left: 6px;
+		display: flex;
+		justify-content: start;
+		width: 230px;
+	}
+}
+
+@media (max-width: 640px) {
+
+	.fname>div>input,
+	.lname>div>input {
+		display: flex;
+		justify-content: center;
+		width: 150px;
+	}
+
+	.email>div>input,
+	.phone>div>input {
+		margin-left: 6px;
+		display: flex;
+		justify-content: start;
+		width: 180px;
+	}
+
+	.inputdiv>input {
+		display: flex;
+		justify-content: center;
+		width: 10em;
+	}
+}
+
+@media (max-width: 560px) {
+
+	.email>div>input,
+	.phone>div>input {
+		margin-left: 6px;
+		display: flex;
+		justify-content: start;
+		width: 180px;
+	}
+}
+
+@media (max-width: 560px) {
+
+	.email>div>input,
+	.phone>div>input {
+		margin-left: 6px;
+		display: flex;
+		justify-content: start;
+		width: 170px;
+	}
+}
+
+@media (max-width: 545px) {
+
+	.email>div>input,
+	.phone>div>input {
+		margin-left: 6px;
+		display: flex;
+		justify-content: start;
+		width: 160px;
+	}
+}
+
+
+/* Label Styles */
+
+
+@media (max-width: 544px) {
+
+	.fname label,
+	.lname label {
+		font-size: 15px;
+	}
+}
+
+@media (max-width: 536px) {
+
+	.fname label,
+	.lname label {
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 527px) {
+
+	.lname label {
+		font-size: 13px;
+	}
+}
+
+@media (max-width: 524px) {
+
+	.email>div>input,
+	.phone>div>input {
+		margin-left: 6px;
+		display: flex;
+		justify-content: start;
+		width: 156px;
+	}
+}
+
+@media (max-width: 504px) {
+
+	.email>div>input,
+	.phone>div>input {
+		margin-left: 6px;
+		display: flex;
+		justify-content: start;
+		width: 140px;
+	}
+}
+
+@media (max-width: 480px) {
+
+	.fname label,
+	.lname label,
+	.email label,
+	.phone label {
+		font-size: 20px;
+	}
+}
+
+@media (max-width: 414px) {
+	.inputdiv>input {
+		display: flex;
+		justify-content: center;
+		width: auto;
+	}
+}
+
+
+/* Header Styles MQs */
+
+
+@media (max-width:1119px) {
+	body {
+		padding-top: 96px;
+	}
+}
+
+@media (max-width:725px) {
+	body {
+		padding-top: 133px;
+	}
+}
+
+@media (max-width: 720px) {
+	body {
+		padding-top: 103px;
+	}
+
+	form {
+		margin-bottom: 70px;
+	}
+
+	.logo {
+		font-size: 25px;
+	}
+}
+
+@media (max-width:747px) {
+	nav ul li a {
+		font-size: 8px;
+	}
+}
+
+@media (max-width:720px) {
+	nav ul li a {
+		font-size: 18px;
+	}
+
+	.checkbtn {
+		display: block;
+	}
+
+	ul.navli {
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		background: RGB(22, 160, 133);
+		top: 80px;
+		left: -100%;
+		text-align: left;
+	}
+
+	nav ul li {
+		display: block;
+		margin: 50px 0;
+		line-height: 30px;
+	}
+
+	nav ul li a:hover:before {
+		transform: scaleX(1);
+		transform-origin: top;
+	}
+
+	#check:checked~ul {
+		left: 0;
+	}
+}
+
+
+@media (max-width:463px) {
+	ul.navli {
+		top: 100px;
+	}
+}
+
+@media (max-width:338px) {
+	ul.navli {
+		top: 100px;
+	}
+}
