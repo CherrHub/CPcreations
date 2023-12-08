@@ -312,7 +312,11 @@ img:hover {
 	}
 }
 
-
+@media (max-width: 290px) {
+	body {
+		padding-top: 110px;
+	}
+}
 
 @media (max-width:747px) {
     nav ul li a {
